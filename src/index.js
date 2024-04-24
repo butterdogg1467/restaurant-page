@@ -1,9 +1,10 @@
+import initialPageLoad from "./homepage"
+import './src/homestyles.css'
+
+
 document.addEventListener('DOMContentLoaded', function() {
 
-alert('test')
-
-
-
+    initialPageLoad()
 
 
 
