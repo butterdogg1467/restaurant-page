@@ -1,0 +1,85 @@
+* {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.2fr 0.2fr 0.2fr 1fr 1fr;
+    background-color: black;
+}
+
+body::-webkit-scrollbar  {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    display: none;
+}
+
+#content {
+    width: 100vw;
+    height: 100vh;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    justify-items: center;
+}
+
+.homepageh1 {
+    font-size: 100px;
+    color: white;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0px;
+}
+
+.homepageh2 {
+    color: white;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: 0px;
+    align-self: start;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100vw;
+    padding-top: 10px;
+}
+
+button {
+    appearance: none;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+    height: 50px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#button1 {
+    grid-column: 1/2;
+}
+
+.menubackground {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+}
+
+.menuh1 {
+    font-size: 100px;
+    color: white;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0px;
+}

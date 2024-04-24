@@ -11,11 +11,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
     ],
   },
+  devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
         template: './src/index.html',

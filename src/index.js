@@ -1,10 +1,14 @@
-import initialPageLoad from "./homepage"
-import './src/homestyles.css'
-
-
+import createHome from "./homepage"
+import createMenu from "./menu";
+import './homestyles.css';
 document.addEventListener('DOMContentLoaded', function() {
 
-    initialPageLoad()
+    createHome()
+
+    createMenu()
+
+
+
 
 
 
