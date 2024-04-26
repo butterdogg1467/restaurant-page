@@ -1,13 +1,20 @@
 
-import { mainText, secondaryText } from "./homepage";
+import { homePageCreated, mainText, secondaryText } from "./homepage";
 
 let menuBackground;
 let menuMainText;
 let menuItems;
+let menuCreated;
+menuCreated = false
 
 export default function createMenu() {
-    let menuButton = document.querySelector('#button2')
-    menuButton.addEventListener('click', function(){
+    if (menuCreated === true) {
+        return
+    }
+
+    menuCreated = true
+
+    if (homePageCreated === true) {
         content.removeChild(mainText)
         content.removeChild(secondaryText)
 
@@ -19,5 +26,14 @@ export default function createMenu() {
         menuBackground = document.createElement('div')
         menuBackground.classList.add('menubackground')
         content.appendChild(menuBackground)
-    })
+
+    }
+    
 }
+
+export function menuRemove() {
+    content.removeChild(menuBackground)
+    content.removeChild(menuMainText)
+}
+
+export { menuCreated, menuBackground, menuItems, menuMainText }
