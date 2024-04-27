@@ -1,20 +1,20 @@
 
-import { homePageCreated, mainText, secondaryText } from "./homepage";
+import { mainText, secondaryText, currentPage } from "./homepage";
 
 let menuBackground;
 let menuMainText;
 let menuItems;
-let menuCreated;
-menuCreated = false
+
 
 export default function createMenu() {
-    if (menuCreated === true) {
+    if (currentPage.menu === true) {
         return
     }
 
-    menuCreated = true
+    currentPage.menu = true
 
-    if (homePageCreated === true) {
+
+    if (currentPage.home === true) {
         content.removeChild(mainText)
         content.removeChild(secondaryText)
 
@@ -36,4 +36,4 @@ export function menuRemove() {
     content.removeChild(menuMainText)
 }
 
-export { menuCreated, menuBackground, menuItems, menuMainText }
+export { menuBackground, menuItems, menuMainText }

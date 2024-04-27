@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let button2 = document.querySelector('#button2')
     let button3 = document.querySelector('#button3')
 
+
     createHome()
 
     button1.addEventListener('click', createHome)

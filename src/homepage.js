@@ -1,18 +1,23 @@
-import { menuCreated, menuBackground, menuItems, menuMainText } from "./menu";
+import {menuBackground, menuItems, menuMainText } from "./menu";
 
 let mainText;
 let secondaryText;
 
-let homePageCreated;
-homePageCreated = false
 let content = document.querySelector('#content')
+export let currentPage = {
+    home: false,
+    menu: false,
+    about: false
+}
+
 
 export default function createHome() {
 
-    if (homePageCreated === true) {
+    if (currentPage.home === true) {
         return
     }
 
+    currentPage.home = true
     
         let backgroundImg = document.createElement('img')
         backgroundImg.src = '../images/pexels-janetrangdoan-769969.jpg'
@@ -32,9 +37,8 @@ export default function createHome() {
         content.appendChild(secondaryText)
 
 
-    homePageCreated = true
 
-    if (menuCreated === true) {
+    if (currentPage.menu === true) {
         content.removeChild(menuMainText)
 
         content.removeChild(menuBackground)
@@ -62,4 +66,4 @@ export default function createHome() {
 
 }
 
-export { mainText, secondaryText, homePageCreated, content };
+export { mainText, secondaryText, content };
