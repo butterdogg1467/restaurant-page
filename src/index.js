@@ -1,4 +1,4 @@
-import createHome, { homePageCreated, mainText, currentPage } from "./homepage"
+import createHome, { homePageCreated, mainText, currentPage, homeRemove } from "./homepage"
 import createMenu, { menuRemove } from "./menu";
 import './homestyles.css';
 document.addEventListener('DOMContentLoaded', function() {
@@ -10,19 +10,19 @@ document.addEventListener('DOMContentLoaded', function() {
     createHome()
 
     button1.addEventListener('click', function() {
+        menuRemove()
         createHome()
         currentPage.home = true
         currentPage.menu = false
         currentPage.about = false
-        alert([currentPage.home, currentPage.menu, currentPage.about])
     })
 
     button2.addEventListener('click', function(){
+        homeRemove()
         createMenu()
         currentPage.menu = true
         currentPage.home = false
         currentPage.about = false
-        alert([currentPage.home, currentPage.menu, currentPage.about])
     })
     
     button3.addEventListener('click', function(){
@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         currentPage.about = true
         currentPage.menu = false
         currentPage.home = false
-        alert([currentPage.home, currentPage.menu, currentPage.about])
     })
 
 

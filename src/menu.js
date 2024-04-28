@@ -1,5 +1,5 @@
 
-import { mainText, secondaryText, currentPage } from "./homepage";
+import { mainText, secondaryText, currentPage, homeRemove } from "./homepage";
 
 let menuBackground;
 let menuMainText;
@@ -15,8 +15,6 @@ export default function createMenu() {
 
 
     if (currentPage.home === true) {
-        content.removeChild(mainText)
-        content.removeChild(secondaryText)
 
         menuMainText = document.createElement('h1')
         menuMainText.classList.add('menuh1')
