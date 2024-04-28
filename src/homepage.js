@@ -1,4 +1,4 @@
-import {menuBackground, menuItems, menuMainText } from "./menu";
+import {menuBackground, menuItems, menuMainText, menuRemove } from "./menu";
 
 let mainText;
 let secondaryText;
