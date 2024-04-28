@@ -39,9 +39,8 @@ export default function createHome() {
 
 
     if (currentPage.menu === true) {
-        content.removeChild(menuMainText)
+        menuRemove()
 
-        content.removeChild(menuBackground)
         let content = document.querySelector('#content')
     
         let backgroundImg = document.createElement('img')
