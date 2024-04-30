@@ -1,4 +1,3 @@
-import {menuBackground, menuItems, menuMainText, menuRemove } from "./menu";
 
 let mainText;
 let secondaryText;
@@ -27,12 +26,12 @@ export default function createHome() {
         document.body.style.backgroundRepeat = 'no-repeat';
     
         mainText = document.createElement('h1')
-        mainText.textContent = 'Restaurant'
+        mainText.textContent = 'La Trattoria Bella Vita'
         mainText.classList.add('homepageh1')
         content.appendChild(mainText)
     
         secondaryText = document.createElement('h2')
-        secondaryText.textContent = 'Restaurant is good'
+        secondaryText.textContent = 'Savor the Italian Experience'
         secondaryText.classList.add('homepageh2')
         content.appendChild(secondaryText)
 

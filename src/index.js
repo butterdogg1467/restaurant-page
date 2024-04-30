@@ -1,5 +1,6 @@
-import createHome, { homePageCreated, mainText, currentPage, homeRemove } from "./homepage"
+import createHome, { currentPage, homeRemove } from "./homepage"
 import createMenu, { menuRemove } from "./menu";
+import createAbout, { aboutRemove } from "./about";
 import './homestyles.css';
 document.addEventListener('DOMContentLoaded', function() {
     let button1 = document.querySelector('#button1')
@@ -10,7 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
     createHome()
 
     button1.addEventListener('click', function() {
-        menuRemove()
+        if (currentPage.menu === true) {
+            menuRemove()
+        }
+        if (currentPage.about === true) {
+            aboutRemove()
+        }
         createHome()
         currentPage.home = true
         currentPage.menu = false
@@ -18,18 +24,29 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     button2.addEventListener('click', function(){
-        homeRemove()
+        if (currentPage.home === true) {
+            homeRemove()
+        }
+        if (currentPage.about === true) {
+            aboutRemove()
+        }
         createMenu()
-        currentPage.menu = true
         currentPage.home = false
+        currentPage.menu = true
         currentPage.about = false
     })
     
     button3.addEventListener('click', function(){
-        menuRemove()
-        currentPage.about = true
-        currentPage.menu = false
+        if (currentPage.menu === true) {
+            menuRemove()
+        }
+        if (currentPage.home === true) {
+            homeRemove()
+        }
+        createAbout()
         currentPage.home = false
+        currentPage.menu = false
+        currentPage.about = true
     })
 
 
