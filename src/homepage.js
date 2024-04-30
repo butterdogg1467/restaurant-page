@@ -19,7 +19,7 @@ export default function createHome() {
     currentPage.home = true
 
         let backgroundImg = document.createElement('img')
-        backgroundImg.src = '../images/pexels-janetrangdoan-769969.jpg'
+        backgroundImg.src = '../images/pexels-jess-vide-5507643.jpg'
     
         document.body.style.backgroundImage = `url('${backgroundImg.src}')`;   
         document.body.style.backgroundSize = '105vw 100vh';
