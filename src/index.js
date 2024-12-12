@@ -1,6 +1,7 @@
 import createHome, { currentPage, homeRemove } from "./homepage"
 import createMenu, { menuRemove } from "./menu";
 import createAbout, { aboutRemove } from "./about";
+import myImage from '../images/pexels-jess-vide-5507643.jpg';
 import './homestyles.css';
 document.addEventListener('DOMContentLoaded', function() {
     let button1 = document.querySelector('#button1')
